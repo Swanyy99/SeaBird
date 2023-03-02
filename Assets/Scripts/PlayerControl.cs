@@ -7,8 +7,6 @@ using UnityEngine.Events;
 public class PlayerControl : MonoBehaviour
 {
 
-    private Rigidbody2D rigid;
-
     private Animator anim;
 
     private Collider2D col;
@@ -27,7 +25,6 @@ public class PlayerControl : MonoBehaviour
 
     private void Awake()
     {
-        rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         col = GetComponent<Collider2D>();
     }
@@ -63,18 +60,6 @@ public class PlayerControl : MonoBehaviour
             PlayerPrefs.SetInt("BestScore", 0);
     }
 
-    //public void SetGravity(bool active)
-    //{
-    //    rigid.simulated = active;
-    //}
-
-    // Update is called once per frame
-    //public void Jump()
-    //{
-    //    //rigid.AddForce(Vector2.up * jumpPower , ForceMode2D.Impulse);
-    //    //if (isAlive == true)
-    //    //    rigid.velocity = Vector2.up * jumpPower;
-    //}
 
     public void Die()
     {
